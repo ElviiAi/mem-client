@@ -134,12 +134,6 @@ You can install the `mem-client` package via pip:
 pip install mem-client
 ```
 
-Or via conda (once published):
-
-```bash
-conda install -c conda-forge mem-client
-```
-
 ## Usage
 
 ### Initialization
