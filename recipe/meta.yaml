@@ -1,0 +1,38 @@
+package:
+  name: mem-client
+  version: 0.0.1
+
+source:
+  url: https://github.com/elviiai/mem-client/archive/refs/tags/v0.0.1.tar.gz
+  sha256: dcfcc751e475e008cfe02b43ae0cc8645fdc6e3ca417483eb630641c0908990b
+
+build:
+  noarch: python
+  script: python -m pip install --no-deps --ignore-installed .
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - requests >=2.25.1
+    - python-dotenv >=0.19.2
+    - click >=8.0.3
+
+test:
+  imports:
+    - mem_client
+
+about:
+  home: https://github.com/elviiai/mem-client
+  license: MIT
+  license_file: LICENSE
+  summary: A Python client for interacting with the Mem API
+  description: |
+    A Python client for interacting with the Mem API, including support for Mem's unique Markdown format.
+  dev_url: https://github.com/elviiai/mem-client
+
+extra:
+  recipe-maintainers:
+    - ElviiAi
